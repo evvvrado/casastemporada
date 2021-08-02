@@ -1,0 +1,60 @@
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    list-style: none;
+    outline: none;
+    text-decoration: none;
+
+    font-size: 1.6rem;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+
+  button {
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  ul,
+  ol {
+    margin: 0;
+  }
+
+  /* GRID */
+  .container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    .container-fav {
+      width: 100%;
+      max-width: calc(1216px + 30px);
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+  }
+
+  @include responsive(600px) {
+    font-size: 40%;
+  }
+}
