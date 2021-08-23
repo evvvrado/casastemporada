@@ -1,0 +1,268 @@
+.s_details {
+  padding-top: 7.6rem;
+
+  .container-fav {
+    ._info {
+      max-width: 100vw;
+      ._Name {
+        @include flex(row, center, space-between);
+        width: 100%;
+        ._Text {
+          white-space: nowrap;
+          h1 {
+            display: inline-block;
+            font-size: 4.8rem;
+            margin-right: 1rem;
+          }
+          p {
+            display: inline-block;
+            font-size: 2.5rem;
+
+            color: $blue;
+          }
+        }
+      }
+
+      ._Endereco {
+        margin-top: 2.8rem;
+        margin-bottom: 5.1rem;
+
+        @include flex(row, center, flex-start);
+        gap: 0.7rem;
+        p {
+          white-space: unset;
+          font-family: "Roboto";
+          font-size: 2.4rem;
+          color: $gray;
+        }
+      }
+    }
+    ._showcase {
+      margin-bottom: 7rem;
+      @include flex(row, center, flex-start);
+      img {
+        cursor: pointer;
+        transition: 0.32s ease-in;
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+      ._mainPic {
+        width: 100%;
+        max-width: 77.1rem;
+        height: 48.8rem;
+      }
+      ._othersPic {
+        @include flex(row, center, center);
+        flex-wrap: wrap;
+        gap: 1.3rem;
+
+        img {
+          width: 100%;
+          max-width: 31.2rem;
+          height: 24.1rem;
+
+          &:last-child {
+            border-radius: 0 0 2rem 0;
+          }
+          &:nth-child(2) {
+            border-radius: 0 2rem 0 0;
+          }
+        }
+      }
+    }
+
+    main {
+      @include flex(row, space-between, flex-start);
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+
+        bottom: -4rem;
+        left: -2rem;
+
+        height: 3.2rem;
+        width: 3.2rem;
+
+        background: url("/img/draw_conor.svg");
+      }
+      ._content {
+        max-width: 86rem;
+        ._status {
+          p {
+            font-size: 2.4rem;
+            line-height: 5.4rem;
+            color: $gray;
+            padding-bottom: 1.8rem;
+            border-bottom: 0.03rem solid $gray;
+          }
+        }
+
+        ._list {
+          ul {
+            margin-top: 4rem;
+
+            li {
+              margin-bottom: 2.7rem;
+              @include flex(row, center, flex-start);
+              gap: 1.9rem;
+
+              ._icon {
+                img {
+                  width: 3.8rem;
+                  height: 3.8rem;
+                }
+              }
+
+              ._text {
+                span {
+                  font-weight: 600;
+                  font-size: 2.4rem;
+
+                  color: $blue;
+                }
+                p {
+                  font-size: 1.8rem;
+
+                  color: $gray;
+                }
+              }
+            }
+          }
+        }
+
+        ._description {
+          margin-top: 1.8rem;
+          p {
+            font-style: normal;
+            font-weight: normal;
+            line-height: 2.9rem;
+
+            color: $blue;
+          }
+        }
+      }
+
+      ._agent {
+        width: 100%;
+        position: relative;
+        height: 100vh;
+
+        ._box {
+          position: sticky;
+          top: 1rem;
+          height: max-content;
+
+          width: 100%;
+          max-width: 46.2rem;
+          text-align: center;
+          margin-left: auto;
+          @include flex(column, center, flex-start);
+
+          padding: 3rem 0;
+
+          border: 1px solid #f7f7f7;
+          box-sizing: border-box;
+          box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+          border-radius: 20px;
+
+          ._pic {
+            img {
+              border-radius: 50%;
+            }
+          }
+
+          span {
+            margin-top: 1.7rem;
+            font-weight: bold;
+            font-size: 3.2rem;
+            line-height: 3.9rem;
+
+            color: $blue;
+
+            &._crc {
+              font-weight: normal;
+              font-size: 1.8rem;
+
+              color: $orange;
+            }
+          }
+
+          p {
+            margin-top: 1.3rem;
+            font-size: 2.4rem;
+            line-height: 2.8rem;
+
+            color: $gray;
+            max-width: 30rem;
+          }
+
+          button {
+            @include style-btn(6.3rem, $green, $white);
+            margin-top: 3.2rem;
+
+            width: 100%;
+            max-width: 28.3rem;
+
+            @include flex(row, center, center);
+            gap: 1.5rem;
+
+            &:hover {
+              ._icon {
+                content: url("/img/whatsapp_green.svg");
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @include responsive(1300px) {
+      ._showcase {
+        width: 100%;
+        ._mainPic {
+          margin: 0 auto;
+          width: 100%;
+          img {
+            border-radius: 2rem;
+          }
+        }
+        ._othersPic {
+          display: none;
+        }
+      }
+      main {
+        @include flex(column, center, center);
+
+        ._agent {
+          height: auto;
+          ._box {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 5rem;
+          }
+        }
+      }
+    }
+
+    @include responsive(720px) {
+      ._showcase {
+        ._mainPic {
+          height: auto;
+        }
+      }
+      ._info {
+        ._Name {
+          flex-direction: column-reverse;
+          gap: 1rem;
+        }
+      }
+    }
+  }
+
+  @include responsive(720px) {
+    padding-top: 2rem;
+  }
+}

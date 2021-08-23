@@ -1,10 +1,11 @@
+![logo Casas Temporadax](/img/_logo100_white.png)
 
-Repositório de reset para desenvolvimento ~$priv8
+Projeto de criação do website da Casas Temporada Alfenas
 
+### author:
 
-### author: 
 [![evvvrado](/img/_evvvrado34.png)](https://www.linkedin.com/in/evvvrado/)
 
-<!-- ### with:
+### with:
+
 [![7seven](/img/_logo7seven.png)](https://7seventrends.com)
- -->

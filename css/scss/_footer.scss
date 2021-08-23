@@ -1,0 +1,83 @@
+footer {
+  background-color: $gray-2;
+  padding-top: 10rem;
+
+  .container-fav {
+    p,
+    span,
+    a {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.8rem;
+      line-height: 21px;
+      /* identical to box height */
+
+      /* Casas Gray Text */
+
+      color: #646464;
+    }
+
+    a {
+      font-size: 1.8rem;
+      line-height: 200%;
+    }
+
+    ._content {
+      padding-top: 4.1rem;
+      padding-bottom: 2.9rem;
+      @include flex(row, flex-start, space-between);
+
+      h4 {
+        font-family: "Roboto";
+        font-weight: bold;
+        font-size: 1.8rem;
+        line-height: 2.1rem;
+        text-transform: uppercase;
+        color: $blue;
+        margin-bottom: 1.9rem;
+      }
+
+      ._col {
+        max-width: 29.3rem;
+
+        ._socialmedias {
+          margin-top: 13.6rem;
+          gap: 2.3rem;
+          @include flex(row, center, flex-end);
+        }
+      }
+    }
+    ._end {
+      @include flex(row, center, space-between);
+      padding-bottom: 3.2rem;
+
+      span {
+        @include flex(row, center, center);
+        gap: 0.8rem;
+      }
+    }
+  }
+
+  @include responsive(800px) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    .container-fav {
+      ._content {
+        @include flex(column, center, center);
+        text-align: center;
+        gap: 4rem;
+
+        ._col {
+          ._socialmedias {
+            margin-top: 0;
+          }
+        }
+      }
+      ._end {
+        flex-direction: column;
+        gap: 2rem;
+      }
+    }
+  }
+}

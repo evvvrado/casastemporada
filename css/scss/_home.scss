@@ -1,0 +1,207 @@
+body {
+  &.home {
+    background-image: url("/img/header_background.svg");
+    background-position: center 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+section.s-hero {
+  opacity: 0;
+  .container-fav {
+    @include flex(row, flex-start, space-between);
+  }
+  ._left {
+    max-width: 62.1rem;
+    padding-top: 12.6rem;
+    p {
+      color: $orange;
+      margin-top: 1rem;
+      margin-bottom: 2.8rem;
+    }
+    button {
+      @include style-btn(4.8rem, $blue, $white);
+    }
+  }
+  ._right {
+    position: relative;
+    top: -7rem;
+    ._hero-imgs {
+      animation: casual 8s infinite alternate;
+    }
+  }
+  @include responsive(730px) {
+    .container-fav {
+      flex-direction: column-reverse;
+    }
+    ._left {
+      text-align: center;
+    }
+    ._right {
+      top: 4rem;
+      right: -3rem;
+      max-width: 40rem;
+      @include flex(row, center, center);
+      ._hero-imgs {
+        animation: none;
+      }
+    }
+  }
+}
+
+section.s_topfive {
+  overflow-x: hidden;
+  padding-top: 2rem;
+  ._title {
+    margin-bottom: 1.1rem;
+  }
+  ._top {
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    // width: 120%;
+    white-space: nowrap;
+    ._fivecase {
+      display: inline-block;
+      margin-right: 2rem;
+      .number {
+        font-family: "Roboto";
+        display: inline-block;
+        margin-right: -6rem;
+
+        font-size: 22.3rem;
+        font-weight: 900;
+        color: transparent;
+
+        -webkit-text-stroke: 3px rgba(0, 0, 0, 0.25);
+      }
+      ._image {
+        display: inline-block;
+      }
+    }
+    @include responsive(1440px) {
+    }
+  }
+
+  @include responsive(730px) {
+    padding-top: 8rem;
+    padding-bottom: 2rem;
+    ._fivecase {
+      .number {
+        margin-right: -8rem !important;
+      }
+    }
+  }
+}
+
+section.s_list {
+  margin-top: 20rem;
+  padding-top: 5rem;
+  overflow-x: hidden;
+
+  &.gray {
+    background-color: $gray-2;
+  }
+
+  .container-fav {
+    ._title {
+      @include flex(row, center, space-between);
+      margin-bottom: 3rem;
+
+      ._buttons {
+        cursor: pointer;
+        width: 100%;
+        max-width: 73px;
+
+        @include flex(row, center, space-between);
+
+        ._next {
+          background-color: $blue;
+          border-radius: 50%;
+          height: 40px;
+          width: 40px;
+
+          @include flex(row, center, center);
+        }
+      }
+    }
+    ._cases {
+      scroll-behavior: smooth;
+      gap: 2rem;
+      overflow-x: scroll;
+      width: 102%;
+      white-space: nowrap;
+      ._case {
+        width: 41.4rem;
+        height: 46.5rem;
+        display: inline-block;
+        margin-right: 2rem;
+
+        ._name {
+          margin-top: 1.7rem;
+          font-size: 2.4rem;
+        }
+      }
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+}
+
+section.s_create {
+  padding-top: 17.9rem;
+  padding-bottom: 9.5rem;
+  .container-fav {
+    @include flex(row, center, space-between);
+    ._ilustration {
+      width: 100%;
+      max-width: 72.4rem;
+    }
+    ._text {
+      max-width: 56.94rem;
+      ._title {
+        margin-bottom: 2.5rem;
+        span {
+          font-family: "Proxima Nova";
+          font-style: normal;
+          font-weight: bold;
+          font-size: 4.8rem;
+          line-height: 5.8rem;
+
+          color: $blue;
+        }
+        ._icon {
+          display: inline-block;
+          margin-right: 1rem;
+          img {
+            display: inline-block;
+          }
+        }
+      }
+      p {
+        color: $gray;
+
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 23px;
+
+        margin-bottom: 4.5rem;
+      }
+      button {
+        @include style-btn(5.5rem, $orange, $white);
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 17rem;
+      }
+    }
+    @include responsive(730px) {
+      flex-direction: column;
+    }
+  }
+}
