@@ -97,7 +97,14 @@ section.s_topfive {
 }
 
 section.s_list {
-  margin-top: 20rem;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+
+  body#details & {
+    margin: 0;
+    margin-top: 20rem;
+  }
+
   padding-top: 5rem;
   overflow-x: hidden;
 
